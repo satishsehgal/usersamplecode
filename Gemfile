@@ -25,11 +25,17 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+#Use serializers'
+gem 'active_model_serializers', '~> 0.10.0'
 
 #Use decent exposer
 gem 'decent_exposure'
 #Use paranoia to deleted records
 gem "paranoia"
+#Use responder
+gem 'responders'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -45,6 +51,8 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem "rubocop"
+  #Use dotenv
+  gem "dotenv-rails"
 end
 
 group :development do
