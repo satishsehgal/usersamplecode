@@ -18,7 +18,7 @@ default: &default
 
 development:
   <<: *default
-  database: samplecode
+  database: usersamplecode
   username: postgres
   host: localhost
   port: 5432
@@ -30,7 +30,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: samplecode_test
+  database: usersamplecode_test
   username: postgres
   host: localhost
   port: 5432
