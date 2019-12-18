@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class V1::UsersController < V1::ApplicationController
-  # before_action :authenticate_token
-  include ActionController::Serialization
+  before_action :authenticate_token
   respond_to :json
 
   expose(:users) { User.all_users }

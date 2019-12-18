@@ -15,6 +15,6 @@ class V1::ApplicationController < ActionController::Base
   private
 
   def auth_token
-    request.headers["auth_token"]
+    request.headers["X-User-Token"]
   end
 end
