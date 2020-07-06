@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+
+if [ "$SKIP_RELEASE_SCRIPT" ]; then
+  echo "Skip release script"
+elif [ "$HEROKU_PARENT_APP_NAME" ]; then
+  echo "Review app release script"
+else
+  echo "Regular app release script"
+  bundle exec rails db:migrate
+fi
