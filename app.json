@@ -3,35 +3,18 @@
   "scripts": {
     "postdeploy": "pg_dump $HEROKU_POSTGRESQL_AMBER_URL | psql $DATABASE_URL && bundle exec rake db:migrate"
   },
-  "env": {
-   
-    "HEROKU_POSTGRESQL_AMBER_URL": {
-      "required": true
-    },
-    "ULI_URL": {
-      "required": true
-    },
-    "HEROKU_APP_NAME": {
-      "required": true
-    },
-    "RACK_ENV": "staging",
-    "RAILS_ENV": "staging",
-    "REPORT_ROW_CONFIRMATION_LIMIT": {
-      "required": true
-    },
-    "SECRET_KEY_BASE": {
-      "generator": "secret"
-    },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "standard-1x"
-    },
-    "web": {
-      "quantity": 1,
-      "size": "standard-2x"
+  "environments": {
+  "test": {
+    // …
+    "scripts": {
+      "test-setup": "",
+      "test": "bundle exec rake test"
     }
   },
+  "staging": {
+    
+  }
+},
   "buildpacks": [
     {
       "url": "heroku/ruby"
