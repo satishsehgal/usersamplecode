@@ -12,7 +12,14 @@
     }
   },
   "staging": {
-
+    "scripts": {
+      "staging": "bundle exec rake db:migrate"
+    }
+  },
+    "production": {
+    "scripts": {
+      "production": "bundle exec rake db:migrate"
+    }
   }
 },
   "buildpacks": [
