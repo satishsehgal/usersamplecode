@@ -1,26 +1,26 @@
 {
   "name": "usersamplecode",
   "scripts": {
-    "postdeploy": "psql $DATABASE_URL && bundle exec rake db:migrate"
-  },
-  "environments": {
-  "test": {
-    // …
-    "scripts": {
-      "test-setup": "",
-      "test": "bundle exec rake test"
-    }
-  },
-  "staging": {
-    "scripts": {
-      "staging": "bundle exec rake db:migrate"
-    }
-  },
-    "production": {
-    "scripts": {
-      "production": "bundle exec rake db:migrate"
-    }
+    "postdeploy": "bundle exec rake db:migrate"
   }
+  // "environments": {
+  // "test": {
+  //   // …
+  //   "scripts": {
+  //     "test-setup": "",
+  //     "test": "bundle exec rake test"
+  //   }
+  // },
+  // "staging": {
+  //   "scripts": {
+  //     "staging": "bundle exec rake db:migrate"
+  //   }
+  // },
+  //   "production": {
+  //   "scripts": {
+  //     "production": "bundle exec rake db:migrate"
+  //   }
+  // }
 },
   "buildpacks": [
     {
